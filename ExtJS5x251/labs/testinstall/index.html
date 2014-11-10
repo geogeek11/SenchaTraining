@@ -1,0 +1,46 @@
+<DOCTYPE HTML>
+<html manifest="" >
+<head>
+	<meta http-equiv="X-UA-Compatible" content = "IE=edge">
+	<meta charset="UTF-8">
+
+	<title>TestInstall</title>
+	<link rel="stylesheet" type="text/css" href="../../ext/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css">
+
+    <script src="../../ext/build/ext-all-debug.js"></script>
+
+<script>
+try {
+	Ext.application({
+		name: 'TestInstall',
+
+		extend: 'Ext.app.Application',
+
+		launch: function() {
+
+			Ext.create('Ext.panel.Panel', {
+				title: ':-)',
+				html: '<h2>It looks like you\'ve got Ext JS!</h2>',
+				x: 20,
+				y: 20,
+				bodyPadding: 24,
+				width: 340,
+				height: 120,
+				renderTo: Ext.getBody()
+			});
+
+		}
+
+	});
+} catch (error) {
+	window.onload = function() {
+	document.body.appendChild(document.createElement("H2")).innerHTML = 'It looks like you do NOT have Ext JS.'
+	var ul = document.body.appendChild(document.createElement("UL"));
+	ul.appendChild(document.createElement("LI")).innerHTML = 'Review the instructions for obtaining Ext JS';
+	ul.appendChild(document.createElement("LI")).innerHTML = 'Talk to your instructor';
+	}
+}
+</script>
+</head>
+<body></body>
+</html>

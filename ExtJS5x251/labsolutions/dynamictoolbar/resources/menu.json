@@ -1,0 +1,17 @@
+[{
+	"text": "File",
+	"menu": [{
+		"text": "New File"
+	}, {
+		"text": "Open..."
+	}]
+}, {
+	"text": "Edit",
+	"menu": [{
+		"text": "Copy"
+	}, {
+		"text": "Cut"
+	}, {
+		"text": "Paste"
+	}]
+}]
