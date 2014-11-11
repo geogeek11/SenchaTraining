@@ -6,14 +6,18 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('YelpExtplorer.view.main.Main', {
-    extend: 'Ext.container.Container',
+    extend: 'Ext.panel.Panel',
     requires: [
         'YelpExtplorer.view.main.MainController',
-        'YelpExtplorer.view.main.MainModel'
+        'YelpExtplorer.view.main.MainModel',
+        'YelpExtplorer.view.Banner',
+        'YelpExtplorer.view.BusinessesFilter',
+        'YelpExtplorer.view.businesses.TabPanel',
+        'YelpExtplorer.view.business.BusinessDetail'
     ],
 
     xtype: 'app-main',
-    
+
     controller: 'main',
     viewModel: {
         type: 'main'
@@ -23,25 +27,21 @@ Ext.define('YelpExtplorer.view.main.Main', {
         type: 'border'
     },
 
+    dockedItems: [{
+      dock: 'top',
+      xtype: 'banner'
+    }],
+
     items: [{
-        xtype: 'panel',
-        bind: {
-            title: '{name}'
-        },
-        region: 'west',
-        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
-        width: 250,
-        split: true,
-        tbar: [{
-            text: 'Button',
-            handler: 'onClickButton'
-        }]
-    },{
-        region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Tab 1',
-            html: '<h2>Content appropriate for the current navigation.</h2>'
-        }]
+      region: 'west',
+      xtype: 'businessesfilter',
+      width: 270
+    }, {
+      region: 'center',
+      xtype: 'businessestabpanel'
+    }, {
+      region: 'east',
+      xtype: 'businessdetail',
+      width: 130
     }]
 });

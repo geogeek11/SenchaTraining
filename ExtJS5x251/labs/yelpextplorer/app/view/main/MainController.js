@@ -14,13 +14,13 @@ Ext.define('YelpExtplorer.view.main.MainController', {
 
     alias: 'controller.main',
 
-    onClickButton: function () {
+    /*onClickButton: function () {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
+    },*/
 
-    onConfirm: function (choice) {
+    /*onConfirm: function (choice) {
         if (choice === 'yes') {
             this.getViewModel().set('name', 'This Is a New Title');
         }
-    }
+    }*/
 });
