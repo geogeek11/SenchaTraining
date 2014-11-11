@@ -15,7 +15,7 @@
      * to "Ext.require". The "app.dir" variable below is expanded to the path where the
      * application resides (the same folder in which this file is located).
      */
-    "classpath": "${app.dir}/app,${workspace.dir}/shared",
+    "classpath": "${app.dir}/app",
 
     "overrides": "${app.dir}/overrides",
 
@@ -27,9 +27,9 @@
     /**
      * The name of the theme for this application.
      */
-
-    "theme": "ext-theme-crisp",
-
+    
+    "theme": "ext-theme-neptune",
+    
     /**
      * The list of required packages (with optional versions; default is "latest").
      *
@@ -39,7 +39,9 @@
      *          "sencha-charts"
      *      ]
      */
-    "requires": ["sencha-charts"],
+    "requires": [
+    ],
+
     /**
      * Sass configuration properties.
      */
@@ -107,12 +109,15 @@
      *      }
      *
      */
-    "js": [{
-        "path": "${ext.dir}/build/ext-all-rtl-debug.js"
-    }, {
-        "path": "app.js",
-        "bundle": true
-    }],
+    "js": [
+        {
+            "path": "${ext.dir}/build/ext-all-rtl-debug.js"
+        },
+        {
+            "path": "app.js",
+            "bundle": true
+        }
+    ],
 
     /**
      * List of all CSS assets in the right inclusion order.
@@ -139,13 +144,12 @@
      *          "update": ""      // OPTIONAL
      *      }
      */
-    "css": [{
-        "path": "bootstrap.css",
-        "bootstrap": true
-    }, {
-        "path": "resources/stylesheet.css",
-        "bootstrap": false
-    }],
+    "css": [
+        {
+            "path": "bootstrap.css",
+            "bootstrap": true
+        }
+    ],
 
     /**
      * This option is used to configure the dynamic loader. At present these options
@@ -171,14 +175,17 @@
 
 
     /**
-     * override objects for setting build environment specific
+     * override objects for setting build environment specific 
      * settings.
      */
-    "production": {},
-
-    "testing": {},
-
-    "development": {},
+    "production": {
+    },
+    
+    "testing": {
+    },
+    
+    "development": {
+    },
 
     /**
      *  Controls the output structure of bootstrap artifacts.  May be specified by a string:
@@ -276,7 +283,8 @@
     /**
      * Extra resources to be copied along when build
      */
-    "resources": [],
+    "resources": [
+    ],
 
     /**
      * File / directory name matchers to ignore when copying to the builds, must be valid regular expressions
@@ -295,15 +303,17 @@
      * Additional resources used during theme slicing operations
      */
     "slicer": {
-        "js": [{
-            "path": "${app.dir}/sass/example/custom.js",
-            "isWidgetManifest": true
-        }]
+        "js": [
+            {
+                "path": "${app.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ]
     },
 
     /**
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "81b9d99c-9740-483c-9a88-28b39d2c1118"
+    "id": "6bf9a5d4-6378-4684-b526-bddd6df48dee"
 }

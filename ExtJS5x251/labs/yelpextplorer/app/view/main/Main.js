@@ -1,16 +1,19 @@
+/**
+ * This class is the main view for the application. It is specified in app.js as the
+ * "autoCreateViewport" property. That setting automatically applies the "viewport"
+ * plugin to promote that instance of this class to the body element.
+ *
+ * TODO - Replace this content of this view to suite the needs of your application.
+ */
 Ext.define('YelpExtplorer.view.main.Main', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.container.Container',
     requires: [
         'YelpExtplorer.view.main.MainController',
-        'YelpExtplorer.view.main.MainModel',
-        'YelpExtplorer.view.Banner',
-        'YelpExtplorer.view.FilterToolbar',
-        'YelpExtplorer.view.business.BusinessDetail',
-        'YelpExtplorer.view.businesses.TabPanel'
+        'YelpExtplorer.view.main.MainModel'
     ],
 
     xtype: 'app-main',
-
+    
     controller: 'main',
     viewModel: {
         type: 'main'
@@ -20,35 +23,25 @@ Ext.define('YelpExtplorer.view.main.Main', {
         type: 'border'
     },
 
-    dockedItems: [{
-        dock: 'top',
-        xtype: "banner"
-    }, {
-        dock: 'top',
-        xtype: 'filtertoolbar'
-    }],
     items: [{
-        region: 'center',
-        xtype: 'businessestabpanel',
-        listeners: {
-            tabchange: 'onBusinessesTabChange'
-        }
-    }, {
-        region: 'east',
-        xtype: 'businessdetail',
-        width: 130,
-        title: 'Detail',
-        collapsible: true,
-        titleCollapse: true,
-        collapseMode: 'mini',
-        border: true,
+        xtype: 'panel',
         bind: {
-            // data: '{business}'
-            data: {
-                bindTo: '{business}',
-                deep: true
-            }
+            title: '{name}'
         },
-
+        region: 'west',
+        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
+        width: 250,
+        split: true,
+        tbar: [{
+            text: 'Button',
+            handler: 'onClickButton'
+        }]
+    },{
+        region: 'center',
+        xtype: 'tabpanel',
+        items:[{
+            title: 'Tab 1',
+            html: '<h2>Content appropriate for the current navigation.</h2>'
+        }]
     }]
 });

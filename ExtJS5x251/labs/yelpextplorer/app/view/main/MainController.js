@@ -1,3 +1,10 @@
+/**
+ * This class is the main view for the application. It is specified in app.js as the
+ * "autoCreateViewport" property. That setting automatically applies the "viewport"
+ * plugin to promote that instance of this class to the body element.
+ *
+ * TODO - Replace this content of this view to suite the needs of your application.
+ */
 Ext.define('YelpExtplorer.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
@@ -7,51 +14,13 @@ Ext.define('YelpExtplorer.view.main.MainController', {
 
     alias: 'controller.main',
 
-
-    routes: {
-        '!:tab': 'processRoute',
-        '!:tab/:schoolId': 'processRoute'
+    onClickButton: function () {
+        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
 
-    mixins: ['YelpExtplorer.view.main.Routes'],
-
-    onSchoolsLoadFirstTime: function(store) {
-        var token = Ext.util.History.getToken().substr(1); // Skip the !
-        var index = token.indexOf('/');
-        var tab = token.substr(0, index);
-        var schoolId = token.substr(index + 1);
-        this.processRoute(tab, schoolId);
-    },
-    onBusinessesRefresh: function(store) {
-        var rawData = {
-            "0": 0,
-            "1": 0,
-            "1.5": 0,
-            "2": 0,
-            "2.5": 0,
-            "3": 0,
-            "3.5": 0,
-            "4": 0,
-            "4.5": 0,
-            "5": 0
-        };
-        store.each(function(school) {
-            var stars = school.data.stars.toString();
-            rawData[stars]++;
-        });
-        var data = [];
-        Ext.Array.forEach(["0", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5"], function(item) {
-            data.push([item, rawData[item]]);
-        });
-        this.getStore('starCounts').setData(data);
-    },
-    initViewModel: function(vm) {
-        var me = this;
-        vm.bind('{school}', this.clearBusiness, this);
-        vm.bind('{school.id}', this.onSchoolIdChange, this);
-    },
-    clearBusiness: function() {
-        this.getViewModel().set('business', null);
+    onConfirm: function (choice) {
+        if (choice === 'yes') {
+            this.getViewModel().set('name', 'This Is a New Title');
+        }
     }
-
 });
