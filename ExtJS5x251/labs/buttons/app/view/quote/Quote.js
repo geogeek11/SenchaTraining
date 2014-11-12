@@ -4,10 +4,12 @@ Ext.define("Buttons.view.quote.Quote", {
 	requires: ['Buttons.view.quote.QuoteController', 'Buttons.view.quote.QuoteModel'],
 	controller: "quote",
 	viewModel: {
+
+
 		type: "quote"
 	},
 
-	title: 'Jane Austen',
+	title: 'Hitchhiker\'s Guide',
 	bind: {
 		data: {
 			bindTo: '{quote}',
@@ -15,10 +17,39 @@ Ext.define("Buttons.view.quote.Quote", {
 		}
 	},
 	tpl: '<div style="text-align: {align}">{text}</div>',
-	tbar: [
-		// Segmented button goes here,
-		'-', 
-		// Split button goes here
+	tbar: [{
+			xtype: 'segmentedbutton',
+			defaults: {
+				handler:'onChooseAlign'
+			},
+			items: [{
+				  icon: 'resources/icons/text_align_left.png',
+				  itemId: 'left',
+				  pressed: true
+				},{
+				  icon: 'resources/icons/text_align_center.png',
+				  itemId: 'center'
+				},{
+				  icon: 'resources/icons/text_align_right.png',
+				  itemId: 'right'
+			}],
+		},'-',{
+			xtype: 'splitbutton',
+			text: 'Choose Wisely',
+			reference: 'splitbutton',
+			menu: {
+				defaults: {
+					handler:'onChooseQuote'
+				},
+				items: [{
+				 text: 'Towels'
+				},{
+					text: 'Babal Fish'
+				},{
+					text: 'Freedom'
+				}]
+			}
+		}
 	],
 	bodyPadding: 8,
 	border: true

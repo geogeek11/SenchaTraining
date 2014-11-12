@@ -13,25 +13,3 @@ Ext.define('Buttons.view.main.Main', {
 		height: 400
 	}]
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

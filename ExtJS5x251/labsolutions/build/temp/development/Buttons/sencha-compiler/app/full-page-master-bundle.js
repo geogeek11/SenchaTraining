@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /Applications/XAMPP/xamppfiles/htdocs/SenchaTraining/ExtJS5x251/labsolutions/buttons/app.js
+// @require /Library/WebServer/Documents/SenchaTraining/ExtJS5x251/labsolutions/buttons/app.js
