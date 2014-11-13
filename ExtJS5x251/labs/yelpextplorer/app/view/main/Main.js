@@ -35,13 +35,27 @@ Ext.define('YelpExtplorer.view.main.Main', {
     items: [{
       region: 'west',
       xtype: 'businessesfilter',
-      width: 270
+      //height: 100,
+      width: 270,
+      border: true,
+      title: 'Filter the things!',
+      collapsible: true,
+      collapseMode: 'mini',
+      titleCollapse: true
     }, {
       region: 'center',
-      xtype: 'businessestabpanel'
+      xtype: 'businessestabpanel',
+      //height: 100
     }, {
       region: 'east',
       xtype: 'businessdetail',
-      width: 130
+      //height: 100,
+      width: 270,
+      border: true,
+      title: 'Business Details:',
+      //weight:-20,
+      collapsible: true,
+      collapseMode: 'mini',
+      titleCollapse: true
     }]
 });
