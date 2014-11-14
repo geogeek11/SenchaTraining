@@ -1,5 +1,6 @@
 Ext.define('YelpExtplorer.view.BusinessesFilter',{
   extend: 'Ext.panel.Panel',
+  requires: ['Ext.form.field.ComboBox'],
   xtype: 'businessesfilter',
   html: '270',
 
@@ -41,5 +42,27 @@ Ext.define('YelpExtplorer.view.BusinessesFilter',{
     callback: function(panel, tool){
       panel.toggle();
     }
+  }],
+
+  tbar: [{
+    xtype: 'combobox',
+    width: 150,
+    forceSelection: true,
+    emptyText: 'Select a university',
+
+    store: {
+        model: 'Ext.data.Model',
+        data: [
+            {"id":0, "name":"USC", "latitude":34.01937, "longitude":-118.28611},
+            {"id":1, "name":"MIT", "latitude":42.36561, "longitude":-71.104032},
+            {"id":20, "name":"Illinois", "latitude":40.111721,"longitude":-88.2309}
+        ]
+    },
+    bind: {
+        selection: '{school}'
+    },
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id'
   }]
 });

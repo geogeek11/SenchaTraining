@@ -9,7 +9,10 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
 
   items: [{
       title: 'Map',
-      xtype: 'businessesmap'
+      xtype: 'businessesmap',
+      bind: {
+        location: '{location}'
+    }
   }, {
       title: 'View',
       xtype: 'businessesview'

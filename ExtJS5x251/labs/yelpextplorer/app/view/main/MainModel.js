@@ -7,7 +7,22 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
     alias: 'viewmodel.main',
 
     data: {
-        name: 'Hi, YelpExtplorer'
+        name: 'Hi, YelpExtplorer',
+        school: null
+    },
+    
+    formulas: {
+        location: {
+            bind: '{school}',
+            get: function(school) {
+                if (school) {
+                    return {
+                        latitude: school.data.latitude,
+                        longitude: school.data.longitude
+                    };
+                }
+            }
+        }
     }
 
     //TODO - add data, formulas and/or methods to support your view
