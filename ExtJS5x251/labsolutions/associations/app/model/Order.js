@@ -3,7 +3,7 @@ Ext.define('Associations.model.Order', {
 
 	fields: ['id', {
 		name: 'customer_id',
-		// reference: 'Customer'
+		//reference: 'Customer'
 	}, {
 		name: 'date',
 		type: 'date'
