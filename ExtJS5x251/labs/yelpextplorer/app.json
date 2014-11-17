@@ -148,6 +148,10 @@
         {
             "path": "bootstrap.css",
             "bootstrap": true
+        },
+        {
+            "path": "resources/stylesheet.css",
+            "bootstrap": false
         }
     ],
 

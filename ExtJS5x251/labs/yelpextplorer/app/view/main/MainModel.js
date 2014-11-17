@@ -48,7 +48,8 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
         filters: [{
           property: 'schoolid',
           value: '{school.id}'
-        }]
+        }],
+        sorters: ['name']
       }
     }
 
