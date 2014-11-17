@@ -2,7 +2,6 @@ Ext.define('YelpExtplorer.view.BusinessesFilter',{
   extend: 'Ext.panel.Panel',
   requires: ['Ext.form.field.ComboBox'],
   xtype: 'businessesfilter',
-  html: '270',
 
   renderConfig: {
     pinned: true
