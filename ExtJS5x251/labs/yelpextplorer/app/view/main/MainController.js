@@ -15,7 +15,13 @@ Ext.define('YelpExtplorer.view.main.MainController', {
   alias: 'controller.main',
 
   onSchoolsLoadFirstTime: function(store){
-    this.getViewModel().set('school', store.getById(6)); 
+    this.getViewModel().set('school', store.getById(6));
+  },
+
+  initViewModel: function(vm){
+    vm.bind('{business}', function(record){
+        console.log(record && record.data.name);
+    });
   }
 
 });

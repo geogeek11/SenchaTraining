@@ -11,7 +11,8 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
 
     data: {
         //name: 'Hi, YelpExtplorer',
-        school: null
+        school: null,
+        business: null
     },
 
     formulas: {
