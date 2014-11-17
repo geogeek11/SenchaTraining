@@ -24,6 +24,10 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
     }
   }, {
     title: 'Grid',
-    xtype: 'businessesgrid'
+    xtype: 'businessesgrid',
+    bind: {
+      store: '{sortableBusinesses}',
+      selection: '{business}'
+    }
   }]
 });

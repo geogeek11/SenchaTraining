@@ -50,8 +50,9 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
           value: '{school.id}'
         }],
         sorters: ['name']
+      },
+      sortableBusinesses: {
+        source: '{businessstore}'
       }
     }
-
-    //TODO - add data, formulas and/or methods to support your view
 });
