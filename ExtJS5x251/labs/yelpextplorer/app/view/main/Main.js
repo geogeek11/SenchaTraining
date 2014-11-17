@@ -44,7 +44,7 @@ Ext.define('YelpExtplorer.view.main.Main', {
       titleCollapse: true
     }, {
       region: 'center',
-      xtype: 'businessestabpanel',
+      xtype: 'businessestabpanel'
       //height: 100
     }, {
       region: 'east',

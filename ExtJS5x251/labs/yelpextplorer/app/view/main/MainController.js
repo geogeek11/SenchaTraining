@@ -6,21 +6,16 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('YelpExtplorer.view.main.MainController', {
-    extend: 'Ext.app.ViewController',
+  extend: 'Ext.app.ViewController',
 
-    requires: [
-        'Ext.MessageBox'
-    ],
+  requires: [
+    'Ext.MessageBox'
+  ],
 
-    alias: 'controller.main',
+  alias: 'controller.main',
 
-    /*onClickButton: function () {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },*/
+  onSchoolsLoadFirstTime: function(store){
+    this.getViewModel().set('school', store.getById(6)); 
+  }
 
-    /*onConfirm: function (choice) {
-        if (choice === 'yes') {
-            this.getViewModel().set('name', 'This Is a New Title');
-        }
-    }*/
 });
