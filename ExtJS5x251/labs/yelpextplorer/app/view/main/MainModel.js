@@ -5,14 +5,16 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
     extend: 'Ext.app.ViewModel',
     requires: [
       'YelpExtplorer.model.School',
-      'YelpExtplorer.model.Business'
+      'YelpExtplorer.model.Business',
+      'YelpExtplorer.model.Category'
     ],
     alias: 'viewmodel.main',
 
     data: {
         //name: 'Hi, YelpExtplorer',
         school: null,
-        business: null
+        business: null,
+        category: null
     },
 
     formulas: {
@@ -51,8 +53,32 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
         }],
         sorters: ['name']
       },
+      categories: {
+        type: 'tree',
+        model: 'YelpExtplorer.model.Category',
+        autoLoad: true,
+        rootVisible: true,
+        root: {
+            text: 'All',
+            expanded: true
+        }
+      },
       sortableBusinesses: {
-        source: '{businessstore}'
+        source: '{businessesForCategory}'
+      },
+      businessesForCategory: {
+        source: '{businessstore}',
+        filters: [{
+            category: '{category}',
+            id: 'cat',
+            filterFn: function(business) {
+                if (!this.category) {
+                    return true; // Treat no selection as "All"
+                }
+                var c = this.category.data.text;
+                return (c === 'All') || Ext.Array.contains(business.data.categories, c);
+            }
+        }]
       }
     }
 });

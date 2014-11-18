@@ -12,14 +12,14 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
     xtype: 'businessesmap',
     bind: {
       location: '{location}',
-      store: '{businessstore}',
+      store: '{businessesForCategory}',
       business: '{business}'
     }
   }, {
     title: 'View',
     xtype: 'businessesview',
     bind: {
-      store: '{businessstore}',
+      store: '{businessesForCategory}',
       selection: '{business}'
     }
   }, {

@@ -35,6 +35,10 @@ Ext.define('YelpExtplorer.view.main.Main', {
     items: [{
       region: 'west',
       xtype: 'businessesfilter',
+      bind: {
+        store: '{categories}',
+        selection: '{category}'
+      },
       //height: 100,
       width: 270,
       border: true,
