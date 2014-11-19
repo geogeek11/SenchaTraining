@@ -11,6 +11,7 @@ Ext.define('YelpExtplorer.view.main.Main', {
         'YelpExtplorer.view.main.MainController',
         'YelpExtplorer.view.main.MainModel',
         'YelpExtplorer.view.Banner',
+        'YelpExtplorer.view.FilterToolbar',
         'YelpExtplorer.view.BusinessesFilter',
         'YelpExtplorer.view.businesses.TabPanel',
         'YelpExtplorer.view.business.BusinessDetail'
@@ -30,9 +31,12 @@ Ext.define('YelpExtplorer.view.main.Main', {
     dockedItems: [{
       dock: 'top',
       xtype: 'banner'
+    },{
+      dock: 'top',
+      xtype: 'filtertoolbar'
     }],
 
-    items: [{
+    items: [/*{
       region: 'west',
       xtype: 'businessesfilter',
       bind: {
@@ -46,7 +50,7 @@ Ext.define('YelpExtplorer.view.main.Main', {
       collapsible: true,
       collapseMode: 'mini',
       titleCollapse: true
-    }, {
+    },*/ {
       region: 'center',
       xtype: 'businessestabpanel',
       bind: {
