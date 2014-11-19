@@ -8,6 +8,11 @@ Ext.define('YelpExtplorer.model.Business', {
       type: 'json',
       rootProperty: 'data'
     }
-  }
+  },
+
+  fields: [
+    'name',
+    'stars'
+  ]
 
 });
