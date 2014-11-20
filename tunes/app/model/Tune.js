@@ -17,7 +17,9 @@ Ext.define('Tunes.model.Tune', {
     extend: 'Ext.data.Model',
 
     requires: [
-        'Ext.data.field.Field'
+        'Ext.data.field.Field',
+        'Ext.data.proxy.JsonP',
+        'Ext.data.reader.Json'
     ],
 
     fields: [
@@ -45,5 +47,14 @@ Ext.define('Tunes.model.Tune', {
             mapping: '["im:name"].label',
             name: 'title'
         }
-    ]
+    ],
+
+    proxy: {
+        type: 'jsonp',
+        url: 'https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json',
+        reader: {
+            type: 'json',
+            rootProperty: 'feed.entry'
+        }
+    }
 });

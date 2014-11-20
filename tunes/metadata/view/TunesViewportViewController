@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "myviewport",
-        "designer|userClassName": "MyViewportViewController"
+        "designer|userAlias": "tunesviewport",
+        "designer|userClassName": "TunesViewportViewController"
     },
     "designerId": "a8468961-1940-4d96-afa4-0673bf4c9bcc"
 }

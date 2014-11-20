@@ -106,6 +106,34 @@
             },
             "name": "MyField5",
             "designerId": "fb15482b-7eb6-4dcf-8048-cba57228bfec"
+        },
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "b3dc5c86-577f-4992-a6bb-9ea0f4ec7edd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "feed.entry"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "e4120b00-b84e-4b29-a934-e116c9449bbc"
+                }
+            ]
         }
     ]
 }

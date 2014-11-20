@@ -24,12 +24,12 @@ Ext.application({
         'Tune'
     ],
     views: [
-        'MyViewport'
+        'TunesViewport'
     ],
     name: 'Tunes',
 
     launch: function() {
-        Ext.create('Tunes.view.MyViewport');
+        Ext.create('Tunes.view.TunesViewport');
     }
 
 });

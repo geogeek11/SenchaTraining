@@ -7,8 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "designer|initialView": true,
-        "designer|userAlias": "myviewport",
-        "designer|userClassName": "MyViewport",
+        "designer|userAlias": "tunesviewport",
+        "designer|userClassName": "TunesViewport",
         "layout": "fit"
     },
     "name": "MyViewport",

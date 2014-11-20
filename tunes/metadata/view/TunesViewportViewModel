@@ -1,0 +1,30 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tunesviewport",
+        "designer|userClassName": "TunesViewportViewModel"
+    },
+    "designerId": "e7b7c1b0-ed32-4a5b-ba9f-a02218272a8f",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "model": "Tune",
+                "name": "tunes"
+            },
+            "name": "MyStore",
+            "designerId": "b4e4ef05-921b-4265-9254-47680d209ded"
+        }
+    ]
+}
