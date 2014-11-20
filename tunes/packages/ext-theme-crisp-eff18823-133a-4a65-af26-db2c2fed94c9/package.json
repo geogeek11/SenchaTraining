@@ -1,0 +1,22 @@
+{
+    "name": "ext-theme-crisp-eff18823-133a-4a65-af26-db2c2fed94c9",
+    "type": "theme",
+    "creator": "Architect",
+    "summary": "Architect created theme. Edit through Architect. Manual edits here will likly be discarded.",
+    "detailedDescription": "Architect created theme. Edit through Architect. Manual edits here will likly be discarded.",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "slicer": {
+        "js": [
+            {
+                "path": "${package.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ]
+    },
+    "output": "${package.dir}/build",
+    "local": true,
+    "requires": [],
+    "extend": "ext-theme-crisp"
+}

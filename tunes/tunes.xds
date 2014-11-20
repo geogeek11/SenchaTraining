@@ -1,0 +1,48 @@
+{
+    "name": "tunes",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "5.0.3.324",
+            "frameworkVersion": "5.0.1.1189"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost/SenchaTraining/tunes/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext50",
+    "viewOrderMap": {
+        "view": [],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "296bea37-2113-45f9-8aaf-6f6738ed8a7c",
+            "eff18823-133a-4a65-af26-db2c2fed94c9"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

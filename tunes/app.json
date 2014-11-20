@@ -1,0 +1,63 @@
+{
+   "name": "Tunes",
+   "indexHtmlPath": "index.html",
+   "classpath": "${app.dir}/app",
+   "overrides": "${app.dir}/overrides",
+   "framework": "ext",
+   "theme": "ext-theme-crisp-eff18823-133a-4a65-af26-db2c2fed94c9",
+   "requires": [],
+   "sass": {
+      "namespace": "Tunes"
+   },
+   "url": null,
+   "js": [
+      {
+         "path": "${ext.dir}/build/ext-all-rtl-debug.js"
+      },
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "bootstrap.css",
+         "bootstrap": true
+      }
+   ],
+   "production": {},
+   "testing": {},
+   "development": {},
+   "bootstrap": {
+      "base": "${app.dir}",
+      "manifest": "bootstrap.json",
+      "microloader": "bootstrap.js",
+      "css": "bootstrap.css"
+   },
+   "output": {
+      "base": "${workspace.build.dir}/${build.environment}/${app.name}"
+   },
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [],
+   "ignore": [
+      "(^|/)CVS(/?$|/.*?$)"
+   ],
+   "archivePath": "archive",
+   "slicer": {
+      "js": [
+         {
+            "path": "${app.dir}/sass/example/custom.js",
+            "isWidgetManifest": true
+         }
+      ]
+   },
+   "id": "cf769173-a391-4aa4-927a-5231d3faa32c"
+}
