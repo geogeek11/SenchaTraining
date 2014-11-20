@@ -19,11 +19,13 @@ Ext.define('Tunes.view.TunesViewport', {
 
     requires: [
         'Tunes.view.TunesViewportViewModel',
+        'Tunes.view.TunesViewportViewController',
         'Ext.panel.Panel',
         'Ext.view.View',
         'Ext.XTemplate'
     ],
 
+    controller: 'tunesviewport',
     viewModel: {
         type: 'tunesviewport'
     },
@@ -38,10 +40,22 @@ Ext.define('Tunes.view.TunesViewport', {
                 {
                     xtype: 'dataview',
                     autoScroll: true,
+                    itemCls: 'x-dataview-item video',
                     itemSelector: 'div',
                     itemTpl: [
-                        'Data View Item {string}'
-                    ]
+                        ' <figure>',
+                        '     <img src="{image}" />',
+                        '     <figcaption><b>{title}</b><br/>{artist}</figcaption><br/>',
+                        ' </figure>'
+                    ],
+                    overItemCls: 'overvideo',
+                    selectedItemCls: 'x-item-selected selectedvideo',
+                    bind: {
+                        store: '{tunes}'
+                    },
+                    listeners: {
+                        itemdblclick: 'onDataviewItemDblClick'
+                    }
                 }
             ]
         }

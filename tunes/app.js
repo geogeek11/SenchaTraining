@@ -24,7 +24,8 @@ Ext.application({
         'Tune'
     ],
     views: [
-        'TunesViewport'
+        'TunesViewport',
+        'PreviewWindow'
     ],
     name: 'Tunes',
 

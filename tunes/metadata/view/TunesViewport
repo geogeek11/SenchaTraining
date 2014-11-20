@@ -39,9 +39,18 @@
                     "codeClass": null,
                     "userConfig": {
                         "autoScroll": true,
-                        "itemSelector": "div"
+                        "itemCls": "x-dataview-item video",
+                        "itemSelector": "div",
+                        "overItemCls": "overvideo",
+                        "selectedItemCls": "x-item-selected selectedvideo",
+                        "store": [
+                            "{tunes}"
+                        ]
                     },
                     "name": "MyView",
+                    "configAlternates": {
+                        "store": "binding"
+                    },
                     "designerId": "3691bf32-7dff-496a-bbfa-e65728d7cb56",
                     "cn": [
                         {
@@ -54,11 +63,35 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "Data View Item {string}"
+                                    " <figure>",
+                                    "     <img src=\"{image}\" />",
+                                    "     <figcaption><b>{title}</b><br/>{artist}</figcaption><br/>",
+                                    " </figure>"
                                 ]
                             },
                             "name": "itemTpl",
                             "designerId": "5dbee646-9eb5-4f8e-9d87-85eca8e47f9a"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDataviewItemDblClick",
+                                "implHandler": [
+                                    "Ext.create('Tunes.view.PreviewWindow', {",
+                                    " title: record.data.title  + ', provided courtesy of iTunes',",
+                                    " data: record.data",
+                                    "});"
+                                ],
+                                "name": "itemdblclick",
+                                "scope": "me"
+                            },
+                            "name": "onDataviewItemDblClick",
+                            "designerId": "44d55105-122e-4de1-89dd-2014cb4a60a8"
                         }
                     ]
                 }

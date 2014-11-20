@@ -15,5 +15,13 @@
 
 Ext.define('Tunes.view.TunesViewportViewController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.tunesviewport'
+    alias: 'controller.tunesviewport',
+
+    onDataviewItemDblClick: function(dataview, record, item, index, e, eOpts) {
+        Ext.create('Tunes.view.PreviewWindow', {
+            title: record.data.title  + ', provided courtesy of iTunes',
+            data: record.data
+        });
+    }
+
 });

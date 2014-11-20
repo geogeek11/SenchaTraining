@@ -11,7 +11,8 @@
         ],
         "name": "Tunes",
         "views": [
-            "TunesViewport"
+            "TunesViewport",
+            "PreviewWindow"
         ]
     },
     "name": "Application",
