@@ -3,6 +3,7 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
   requires: [
     'YelpExtplorer.view.businesses.Grid',
     'YelpExtplorer.view.businesses.Map',
+    'YelpExtplorer.view.businesses.StarCounts',
     'YelpExtplorer.view.businesses.View'
   ],
   xtype: 'businessestabpanel',
@@ -28,6 +29,12 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
     bind: {
       store: '{sortableBusinesses}',
       selection: '{business}'
+    }
+  }, {
+    title: 'Star Counts',
+    xtype: 'businessesstarcounts',
+    bind: {
+      store: '{starCounts}'
     }
   }]
 });

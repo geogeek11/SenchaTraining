@@ -78,7 +78,17 @@ Ext.define('YelpExtplorer.view.main.MainModel', {
                 var c = this.category.data.text;
                 return (c === 'All') || Ext.Array.contains(business.data.categories, c);
             }
-        }]
+        }],
+        listeners: {
+            refresh: 'onBusinessesRefresh'
+        }
+      },
+      starCounts: {
+        type: 'array',
+        fields: [
+          'stars',
+          'count'
+        ]
       }
     }
 });

@@ -40,6 +40,6 @@ Ext.define('YelpExtplorer.view.business.BusinessDetail',{
     xtype: 'component',
     height: 25,
     weight: 155,
-    html: '<a href="http://www.yelp.com" target="_blank"><img src="resources/images/Powered_By_Yelp_Red.png"/></a>',
+    html: '<a href="http://www.yelp.com" target="_blank"><img src="resources/images/Powered_By_Yelp_Red.png"/></a>'
   }]
 });

@@ -24,9 +24,23 @@ Ext.define('YelpExtplorer.view.main.MainController', {
     });
     vm.bind('{school}', this.clearBusiness, this);
   },
-  
+
   clearBusiness: function() {
     this.getViewModel().set('business', null);
+  },
+
+  onBusinessesRefresh: function(store) {
+    var rawData = {};
+    store.each(function(school) {
+        var stars = school.data.stars.toString();
+        rawData[stars] = rawData[stars] || 0;
+        rawData[stars]++;
+    });
+    var data = [];
+    Ext.Array.forEach(["0", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5"], function(item) {
+        data.push([item, rawData[item]]);
+    });
+    this.getStore('starCounts').setData(data);
   }
 
 });
