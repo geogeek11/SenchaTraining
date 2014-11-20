@@ -1,0 +1,45 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|userAlias": "previewwindow",
+        "designer|userClassName": "PreviewWindow",
+        "height": 352,
+        "modal": true,
+        "resizable": false,
+        "title": "My Window",
+        "width": 640
+    },
+    "name": "MyWindow",
+    "configAlternates": {
+        "resizable": "boolean"
+    },
+    "designerId": "c1938518-513e-47a1-87cd-c81c577ac5c7",
+    "viewControllerInstanceId": "99c14716-3ece-434d-bd44-e43a59031bbc",
+    "viewModelInstanceId": "04b64e3d-5393-471e-a1fc-eec9ef88259f",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<video autoplay preload=\"auto\">",
+                    " <source src=\"{preview}\" type=\"video/mp4\">",
+                    "</video>"
+                ]
+            },
+            "name": "tpl",
+            "designerId": "78267879-b7c5-4f58-8c9a-9543ff7024a3"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "previewwindow",
+        "designer|userClassName": "PreviewWindowViewController"
+    },
+    "designerId": "99c14716-3ece-434d-bd44-e43a59031bbc"
+}
