@@ -1,0 +1,68 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "myviewport",
+        "designer|userClassName": "MyViewport",
+        "layout": "fit"
+    },
+    "name": "MyViewport",
+    "designerId": "84e57281-53c7-484c-aade-c61077c729ce",
+    "viewControllerInstanceId": "a8468961-1940-4d96-afa4-0673bf4c9bcc",
+    "viewModelInstanceId": "e7b7c1b0-ed32-4a5b-ba9f-a02218272a8f",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "title": "iTunes Music Videos"
+            },
+            "name": "MyPanel",
+            "designerId": "fc233422-efe4-49c1-b07f-6c854dc60eaa",
+            "cn": [
+                {
+                    "type": "Ext.view.View",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "itemSelector": "div"
+                    },
+                    "name": "MyView",
+                    "designerId": "3691bf32-7dff-496a-bbfa-e65728d7cb56",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "Data View Item {string}"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "5dbee646-9eb5-4f8e-9d87-85eca8e47f9a"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

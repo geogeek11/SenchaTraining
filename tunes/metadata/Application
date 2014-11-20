@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "name": "Tunes"
+        "name": "Tunes",
+        "views": [
+            "MyViewport"
+        ]
     },
     "name": "Application",
     "designerId": "application"
