@@ -1,0 +1,111 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tune"
+    },
+    "name": "MyModel",
+    "designerId": "6d1bc89d-1107-4a26-991d-407edad85e46",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "[\"im:artist\"].label "
+                ],
+                "name": "artist"
+            },
+            "name": "MyField",
+            "designerId": "7a8b906c-7b4c-4ea4-8e6b-d4fdd043eefb"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "id.attributes[\"im:id\"] "
+                ],
+                "name": "id"
+            },
+            "name": "MyField1",
+            "designerId": "2aba7928-7547-41e1-8779-856ee78f0435"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "[\"im:image\"][2].label "
+                ],
+                "name": "image"
+            },
+            "name": "MyField2",
+            "designerId": "a01ab1e2-e7bb-45ba-9c10-5f5c00686348"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "link[0].attributes.href "
+                ],
+                "name": "itunesstore"
+            },
+            "name": "MyField3",
+            "designerId": "223030ff-842e-45e0-85ac-b66a9f5836e5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "link[1].attributes.href "
+                ],
+                "name": "preview"
+            },
+            "name": "MyField4",
+            "designerId": "5ed82649-dad4-4a5d-aa86-1813da96e98f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "[\"im:name\"].label"
+                ],
+                "name": "title"
+            },
+            "name": "MyField5",
+            "designerId": "fb15482b-7eb6-4dcf-8048-cba57228bfec"
+        }
+    ]
+}
