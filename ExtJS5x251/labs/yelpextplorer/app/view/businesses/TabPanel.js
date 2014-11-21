@@ -7,10 +7,12 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
     'YelpExtplorer.view.businesses.View'
   ],
   xtype: 'businessestabpanel',
+  reference:'businessesTabPanel',
 
   items: [{
     title: 'Map',
     xtype: 'businessesmap',
+    itemId: 'map',
     bind: {
       location: '{location}',
       store: '{businessesForCategory}',
@@ -19,6 +21,7 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
   }, {
     title: 'View',
     xtype: 'businessesview',
+    itemId: 'view',
     bind: {
       store: '{businessesForCategory}',
       selection: '{business}'
@@ -26,6 +29,7 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
   }, {
     title: 'Grid',
     xtype: 'businessesgrid',
+    itemId: 'grid',
     bind: {
       store: '{sortableBusinesses}',
       selection: '{business}'
@@ -33,6 +37,7 @@ Ext.define('YelpExtplorer.view.businesses.TabPanel', {
   }, {
     title: 'Star Counts',
     xtype: 'businessesstarcounts',
+    itemId: 'starcounts',
     bind: {
       store: '{starCounts}'
     }

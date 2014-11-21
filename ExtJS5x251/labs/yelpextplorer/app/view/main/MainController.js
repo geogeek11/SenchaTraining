@@ -12,7 +12,15 @@ Ext.define('YelpExtplorer.view.main.MainController', {
     'Ext.MessageBox'
   ],
 
+  mixins: [
+    'YelpExtplorer.view.main.Routes'
+  ],
+
   alias: 'controller.main',
+
+  routes: {
+    '!:tab': 'processRoute'
+  },
 
   onSchoolsLoadFirstTime: function(store){
     this.getViewModel().set('school', store.getById(6));

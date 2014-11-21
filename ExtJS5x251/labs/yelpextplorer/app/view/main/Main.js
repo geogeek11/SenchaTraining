@@ -55,6 +55,9 @@ Ext.define('YelpExtplorer.view.main.Main', {
       xtype: 'businessestabpanel',
       bind: {
         data: '{business}'
+      },
+      listeners: {
+        tabchange: 'onBusinessesTabChange'
       }
       //height: 100
     }, {
