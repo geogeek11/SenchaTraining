@@ -28,7 +28,7 @@ Ext.define('YelpExtplorer.view.main.MainController', {
 
   initViewModel: function(vm){
     vm.bind('{business}', function(record){
-        console.log(record && record.data.name);
+        //console.log(record && record.data.name);
     });
     vm.bind('{school}', this.clearBusiness, this);
   },

@@ -63,6 +63,15 @@ Ext.define('YelpExtplorer.view.main.Main', {
     }, {
       region: 'east',
       xtype: 'businessdetail',
+      plugins: ['responsive'],
+      responsiveConfig: {
+        wide: {
+          region: 'east'
+        },
+        tall: {
+          region: 'south'
+        }
+      },
       bind: {
         data: {
           bindTo: '{business}',

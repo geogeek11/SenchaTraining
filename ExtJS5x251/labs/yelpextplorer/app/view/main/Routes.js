@@ -2,7 +2,7 @@ Ext.define('YelpExtplorer.view.main.Routes', {
   extend: 'Ext.Mixin',
 
   processRoute: function(tab) {
-    console.log(tab);
+    //console.log(tab);
     tab = tab || 'map';
     this.lookupReference('businessesTabPanel').setActiveItem(tab);
   },
@@ -13,7 +13,7 @@ Ext.define('YelpExtplorer.view.main.Routes', {
   },
 
   updateHash: function(){
-    console.log('updateing hash')
+    //console.log('updateing hash')
     var hash = '!' + (this.cardItemId || 'map');
     this.redirectTo(hash);
   }
